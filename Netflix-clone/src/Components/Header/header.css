@@ -1,0 +1,82 @@
+.header_outer_container {
+width: 100%;
+  background-color: #141414;
+  background-color: rgb(20,20,20);
+  background-color: transparent;
+  color: white;
+  height: 10vh;
+  transition: all 0.5s;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    
+ 
+}
+/* Inner container with padding and flexbox layout */
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 70px;
+}
+
+/* Left side nav */
+.netflix-logo{
+  width: 100px;
+  margin-right: 20px;
+}
+
+.header-left ul,
+.header-right ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.header-left li {
+  margin-right: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.header-left li:hover {
+  color: gray; /* Netflix red on hover */
+}
+
+/* Right side icons */
+.header-right li {
+  margin-left: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.header-right li:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .header-left ul,
+  .header-right ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header-left li,
+  .header-right li {
+    margin: 10px;
+  }
+}
